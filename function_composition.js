@@ -25,4 +25,6 @@ var compose = function (functions) {
 };
 
 const fn = compose([(x) => 10 * x, (x) => 10 * x, (x) => 10 * x]);
-console.log(fn(4));
+console.log(fn(10));
+
+// done
