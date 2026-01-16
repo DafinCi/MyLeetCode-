@@ -1,6 +1,6 @@
 var reduce = function (nums, fn, init) {
   let nilai = init;
-  for (let i = 0; i < nums.length; i++) {
+  for (let i = 0; i <= nums.length - 1; i++) {
     nilai = fn(nilai, nums[i]);
   }
   return nilai;
@@ -12,6 +12,6 @@ console.log(
     function sum(accum, curr) {
       return accum + curr * curr;
     },
-    100
+    0
   )
 );
