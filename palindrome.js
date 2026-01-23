@@ -1,18 +1,18 @@
 var isPalindrome = function (x) {
-  if (x < 0) {
-    return false;
-  } else {
-    if (x.length > 1) {
-      let tes = x / 2;
-      if (!Number.isInteger(tes)) {
-        return true;
-      } else {
-        return false;
-      }
-    }
-    return false;
+  let rev = 0;
+  let temp = x;
+  while (x > 0) {
+    let dig = x % 10;
+    rev = rev * 10 + dig;
+    x = Math.floor(x / 10);
   }
+  if (temp === rev) {
+    return true;
+  }
+  return false;
 };
 
-const tes = isPalindrome(7);
-console.log(tes);
+console.log(isPalindrome(121));
+console.log(isPalindrome(-121));
+console.log(isPalindrome(120));
+console.log(isPalindrome(12321));
